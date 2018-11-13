@@ -1,0 +1,12 @@
+---
+# tasks file for dotfiles
+- name: Config dotfiles pull
+  shell: git --git-dir=$HOME/.myconf/ --work-tree=$HOME pull --rebase && exit 0
+  args:
+      chdir: ~
+      executable: /bin/bash
+- name: Update vim
+  shell: git pull --rebase && exit 0
+  args:
+      chdir: ~/.vim
+      executable: /bin/bash

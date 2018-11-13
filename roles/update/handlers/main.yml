@@ -1,0 +1,6 @@
+---
+# handlers file for update
+- name: Copy file
+  template:
+      src: created_by_ansible.j2
+      dest: /tmp/created_by_ansible

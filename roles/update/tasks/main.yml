@@ -1,0 +1,11 @@
+---
+# tasks file for update
+- name: Update/Upgrade Homebrew
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: Initiate Copy file
+  command: echo "HIHI"
+  notify:
+      - Copy file
